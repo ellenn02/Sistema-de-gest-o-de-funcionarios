@@ -1,0 +1,54 @@
+
+### .gitignore
+
+```gitignore
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos temporários
+*.tmp
+
+# Ignorar arquivos de banco de dados
+*.sql
+
+# Ignorar arquivos de backup
+*.bak
+
+# Ignorar arquivos de configuração local
+config/
+
+# Ignorar arquivos de IDEs
+.idea/
+.vscode/
+.DS_Store
+
+Enunciado: Sistema de Gerenciamento de Funcionários
+Objetivo
+Desenvolver um sistema de gerenciamento de funcionários para uma organização. O sistema deve gerenciar informações sobre funcionários, departamentos e salários, permitindo a manipulação e consulta desses dados.
+
+Requisitos
+Criação do Banco de Dados:
+
+O banco de dados deve ser criado com o nome Gestaofuncionarios.
+Tabelas:
+
+Departamentos: Deve armazenar informações dos departamentos com os campos id_departamento e nome.
+Funcionarios: Deve armazenar informações dos funcionários com os campos id_funcionario, nome, cargo, salario, e id_departamento. Deve haver um relacionamento de chave estrangeira com a tabela Departamentos.
+Salarios: Deve armazenar informações do histórico de salários com os campos id_salario, id_funcionario, data, e valor. Deve haver um relacionamento de chave estrangeira com a tabela Funcionarios.
+Operações:
+
+Inserir Dados: Adicione dados de exemplo para departamentos, funcionários e salários.
+Consultar Dados: Realize consultas para listar funcionários com seus departamentos, calcular o salário total por departamento, e verificar o histórico salarial de um funcionário específico.
+Atualizar Dados: Permita a atualização dos salários dos funcionários e a modificação dos nomes dos departamentos.
+Excluir Dados: Permita a exclusão de funcionários e seus registros de salários, e a remoção de departamentos (certificando-se de que não há funcionários associados).
+Consultas SQL:
+
+Deve ser capaz de gerar relatórios e consultas que mostram a relação entre funcionários e departamentos, e o histórico salarial dos funcionários.
+Entregáveis
+Script SQL completo para criação e manipulação do banco de dados.
+Instruções claras para instalação e uso do banco de dados.
+Documentação para consultas exemplares e operações básicas.
+Avaliação
+O projeto será avaliado com base na clareza e organização do banco de dados, na eficácia das consultas SQL, e na adequação das operações implementadas ao cenário proposto.
+
+
