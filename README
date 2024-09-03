@@ -1,0 +1,40 @@
+# Sistema de Gerenciamento de Funcionários
+
+## Descrição
+
+O Sistema de Gerenciamento de Funcionários é uma solução para gerenciar informações de funcionários, departamentos e salários em uma organização. O sistema permite a adição, atualização, e exclusão de registros de funcionários e departamentos, além de gerenciar o histórico de salários dos funcionários.
+
+## Estrutura do Banco de Dados
+
+O banco de dados `Gestaofuncionarios` contém três tabelas principais:
+
+1. **Departamentos**: Armazena informações sobre os departamentos da organização.
+   - `id_departamento` (INT): Identificador único do departamento.
+   - `nome` (VARCHAR): Nome do departamento.
+
+2. **Funcionarios**: Armazena informações sobre os funcionários.
+   - `id_funcionario` (INT): Identificador único do funcionário.
+   - `nome` (VARCHAR): Nome do funcionário.
+   - `cargo` (VARCHAR): Cargo do funcionário.
+   - `salario` (DECIMAL): Salário do funcionário.
+   - `id_departamento` (INT): Identificador do departamento ao qual o funcionário pertence (chave estrangeira).
+
+3. **Salarios**: Armazena o histórico de salários dos funcionários.
+   - `id_salario` (INT): Identificador único do salário.
+   - `id_funcionario` (INT): Identificador do funcionário (chave estrangeira).
+   - `data` (DATE): Data do registro de salário.
+   - `valor` (DECIMAL): Valor do salário registrado.
+
+## Instalação
+
+1. **Criação do Banco de Dados**: Execute o script SQL fornecido para criar o banco de dados e as tabelas necessárias.
+
+2. **Inserção de Dados**: Após criar as tabelas, insira dados de exemplo usando os comandos `INSERT INTO` fornecidos no script SQL.
+
+## Consultas Exemplares
+
+- **Listar todos os funcionários e seus respectivos departamentos**:
+  ```sql
+  SELECT F.nome AS 'Nome do Funcionario', F.cargo, D.nome AS 'Departamento'
+  FROM Funcionarios F
+  JOIN Departamentos D ON F.id_departamento = D.id_departamento;
